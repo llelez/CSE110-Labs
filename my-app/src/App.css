@@ -156,3 +156,13 @@ input {
   max-width: 200px;
  }
 
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.App-body {
+  padding: 20px; /* Add some padding */
+  border-radius: 10px; /* Optional: rounded corners */
+}

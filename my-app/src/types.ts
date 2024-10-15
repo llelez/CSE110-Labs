@@ -15,7 +15,4 @@ export enum Label {
     favorite: boolean;
  };
 
- export const dummyGroceryList = [
-   { name: "Apples", isPurchased: false },
-   { name: "Bananas", isPurchased: false },
-]
+ export type GroceryItem = { name: string; isPurchased: boolean };
