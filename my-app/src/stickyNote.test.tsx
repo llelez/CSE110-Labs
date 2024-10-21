@@ -109,6 +109,16 @@ describe("Create StickyNote", () => {
     expect(remainingNotes.length).toBe(0); // All notes should be removed
     });
   });
+  
+  test("click heart", () => {
+    render(<StickyNotes />);
+    const clickHeart = screen.getAllByText("🤍");
+    clickHeart.forEach(heart => {
+      fireEvent.click(heart);
+    });
+    const remainingNotes = screen.queryAllByText("🤍");
+    expect(remainingNotes.length).toBe(0);
 
+  })
 
 });

@@ -37,3 +37,12 @@ describe("number of items checked", () => {
     })
 
   });
+
+  test("Add new item to dummyGroceryList and check if it appears", () => {
+    const newItem = { name: "Oranges", isPurchased: false };
+    dummyGroceryList.push(newItem);
+    render(<ToDoList />);
+    expect(screen.getByText(newItem.name)).toBeInTheDocument();
+    dummyGroceryList.pop();
+  });
+  
